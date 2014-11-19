@@ -1,85 +1,85 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-		<title>Symfony 2 Podstawa część 1'sza</title>
+        <title>Symfony 2 Podstawa część 1'sza</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/default.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
 
-	<body>
+    <body>
 
-		<div class="reveal">
+        <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Symfony 2 podstawa</h1>
-					<h3>Jak napisać własną aplikację od zera</h3>
-					<p>
-						<small>Utworzone przez <a href="https://www.facebook.com/przemas55555">Przemysław Kaczmarczyk</a> / <a href="mailto:przemas.kaczmarczyk@gmail.com">przemas.kaczmarczyk@gmail.com</a></small>
-					</p>
-				</section>
-				<section>
-					<h2>Ramowy plan</h2>
-					<ol>
-							<li class="fragmant">Bundle</li>
-							<li class="fragment">Kontrolery - akcje</li>
-							<li class="fragment">Routingi</li>
-							<li class="fragment">Encje</li>
-							<li class="fragment">Formularze</li>
-							<li class="fragment">Widoki</li>
-							<li class="fragment">Tłumaczenia</li>
-							<li class="fragment">Napiszmy tą apke !!!</li>
-							<li class="fragment">TESTY !!!</li>
-					</ol>
-				</section>
-				<section>
-					<section>
-						<h1>Generowanie Bundla</h1>
-						<p>php app/console generate:bundle</p>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h1>Kontrolery</h1>
-						<p>0 Logiki(w założeniu)</p>
-						<p>Ściąga dane z serwisów i wysyła je na widok</p>
-					</section>
-					<section>
-						<p>Listowanie</p>
-						<pre>
-							<code>
-								/**
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>Symfony 2 podstawa</h1>
+                    <h3>Jak napisać własną aplikację od zera</h3>
+                    <p>
+                        <small>Utworzone przez <a href="https://www.facebook.com/przemas55555">Przemysław Kaczmarczyk</a> / <a href="mailto:przemas.kaczmarczyk@gmail.com">przemas.kaczmarczyk@gmail.com</a></small>
+                    </p>
+                </section>
+                <section>
+                    <h2>Ramowy plan</h2>
+                    <ol>
+                            <li class="fragmant">Bundle</li>
+                            <li class="fragment">Kontrolery - akcje</li>
+                            <li class="fragment">Routingi</li>
+                            <li class="fragment">Encje</li>
+                            <li class="fragment">Formularze</li>
+                            <li class="fragment">Widoki</li>
+                            <li class="fragment">Tłumaczenia</li>
+                            <li class="fragment">Napiszmy tą apke !!!</li>
+                            <li class="fragment">TESTY !!!</li>
+                    </ol>
+                </section>
+                <section>
+                    <section>
+                        <h1>Generowanie Bundla</h1>
+                        <p>php app/console generate:bundle</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Kontrolery</h1>
+                        <p>0 Logiki(w założeniu)</p>
+                        <p>Ściąga dane z serwisów i wysyła je na widok</p>
+                    </section>
+                    <section>
+                        <p>Listowanie</p>
+                        <pre>
+                            <code>
+                                /**
      * @Template
      * @return Response
      */
@@ -91,14 +91,14 @@
 
         return ['pagination' => $pagination];
     }
-							</code>
-						</pre>
-        			</section>
-        			<section>
-						<p>Edycja</p>
-						<pre>
-							<code>
-								/**
+                            </code>
+                        </pre>
+                    </section>
+                    <section>
+                        <p>Edycja</p>
+                        <pre>
+                            <code>
+                                /**
      * @Template
      * @ParamConverter("task",class="ToDoListBundle:Task")
      * @param  Request                                                  $request
@@ -112,8 +112,6 @@
             'method' => 'POST',
         ]);
 
-        $form->add('submit', 'submit', ['label' => 'todolist.edit']);
-
         $form->handleRequest($request);
 
         if ($form->isValid()) {
@@ -126,14 +124,14 @@
 
         return ['form' => $form->createView()];
     }
-							</code>
-						</pre>
-        			</section>
-        			<section>
-						<p>Dodawanie</p>
-						<pre>
-							<code>
-								/**
+                            </code>
+                        </pre>
+                    </section>
+                    <section>
+                        <p>Dodawanie</p>
+                        <pre>
+                            <code>
+                                /**
      * @Template("ToDoListBundle:ToDoList:edit.html.twig");
      * @param  Request $request
      * @return array
@@ -147,7 +145,6 @@
             'method' => 'POST',
         ]);
 
-        $form->add('submit', 'submit', ['label' => 'todolist.create']);
         $form->handleRequest($request);
         if ($form->isValid()) {
             $em = $this->get('doctrine.orm.entity_manager');
@@ -159,14 +156,14 @@
 
         return ['form' => $form->createView()];
     }
-							</code>
-						</pre>
-        			</section>
-        			<section>
-						<p>Usuwanie</p>
-						<pre>
-							<code>
-								/**
+                            </code>
+                        </pre>
+                    </section>
+                    <section>
+                        <p>Usuwanie</p>
+                        <pre>
+                            <code>
+                                /**
      * @ParamConverter("task",class="ToDoListBundle:Task")
      * @param  Task                                               $task
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
@@ -182,20 +179,20 @@
 
         return $this->redirect($this->generateUrl('to_do_list_list'));
     }
-							</code>
-						</pre>
-        			</section>
-				</section>
-				<section>
-					<section>
-						<h1>Routingi</h1>
-						<p>Odpowiadają na zapytanie z przeglądarki i wywołują akcje na kontrolerze</p>
-					</section>
-					<section>
-						<p>Resorces/config/routing.yml</p>
-						<pre>
-							<code>
-							to_do_list_list:
+                            </code>
+                        </pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Routingi</h1>
+                        <p>Odpowiadają na zapytanie z przeglądarki i wywołują akcje na kontrolerze</p>
+                    </section>
+                    <section>
+                        <p>Resorces/config/routing.yml</p>
+                        <pre>
+                            <code>
+                            to_do_list_list:
     pattern: /
     defaults: { _controller: ToDoListBundle:ToDoList:list }
 
@@ -211,21 +208,21 @@ to_do_list_edit:
 to_do_list_delete:
     pattern: /delete/{id}
     defaults: { _controller: ToDoListBundle:ToDoList:delete }
-							</code>
-						</pre>
-        			</section>
-				</section>
-				<section>
-					<section>
-						<h1>Encje i repozytorium</h1>
-						<p>Encja - obiekt który ma być zrzutowany na bazę danych</p>
-						<p>Repo - obiekt który odpowiada za przeszukiwanie</p>
-					</section>
-					<section>
-						<p>Entity/Task.php</p>
-							<pre>
-								<code>
-							
+                            </code>
+                        </pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Encje i repozytorium</h1>
+                        <p>Encja - obiekt który ma być zrzutowany na bazę danych</p>
+                        <p>Repo - obiekt który odpowiada za przeszukiwanie</p>
+                    </section>
+                    <section>
+                        <p>Entity/Task.php</p>
+                            <pre>
+                                <code>
+                            
 namespace Laborka\ToDoListBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -261,20 +258,20 @@ class Task
      */
     protected $completeDate;
     }
-							</code>
-						</pre>
-						<p>Dołóżcie settery i gettery</p>
-        			</section>
-				</section>
-				<section>
-					<section>
-						<h1>Formularze</h1>
-						<p>Tworzymy tu formularz który pozwoli nam zadecydować o części encji której modyfikacja jest dostępna dla użytkownika</p>
-					</section>
-					<section>
-						<pre>
-							<code>
-								/**
+                            </code>
+                        </pre>
+                        <p>Dołóżcie settery i gettery</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Formularze</h1>
+                        <p>Tworzymy tu formularz który pozwoli nam zadecydować o części encji której modyfikacja jest dostępna dla użytkownika</p>
+                    </section>
+                    <section>
+                        <pre>
+                            <code>
+                                /**
      * @param FormBuilderInterface $builder
      * @param array                $options
      */
@@ -297,6 +294,9 @@ class Task
                 'multiple' => false,
                 'label' => false
             ])
+            ->add('save', 'submit',[
+                'label' => 'todolist.save'
+            ])
         ;
     }
     /**
@@ -317,20 +317,20 @@ class Task
     {
         return 'to_do_list_task';
     }
-							</code>
-						</pre>
-        			</section>
-				</section>
-				<section>
-					<section>
-						<h1>Widoki</h1>
-						<p>UI tu tworzymy interfejs użytkownika</p>
-					</section>
-					<section>
-						<p>list.html.twig</p>
-						<pre>
-							<code>
-								{% extends "::base.html.twig" %}
+                            </code>
+                        </pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Widoki</h1>
+                        <p>UI tu tworzymy interfejs użytkownika</p>
+                    </section>
+                    <section>
+                        <p>list.html.twig</p>
+                        <pre>
+                            <code>
+                                {% extends "::base.html.twig" %}
 
 {% block body %}
     <table>
@@ -367,14 +367,14 @@ class Task
     <a href="{{ url('to_do_list_add') }}">{{ "todolist.add"|trans }}</a>
 {% endblock %}
 
-							</code>
-						</pre>
-        			</section>
-        			<section>
-						<p>edit.html.twig</p>
-						<pre>
-							<code>
-								{% extends "::base.html.twig" %}
+                            </code>
+                        </pre>
+                    </section>
+                    <section>
+                        <p>edit.html.twig</p>
+                        <pre>
+                            <code>
+                                {% extends "::base.html.twig" %}
 
 {% extends "::base.html.twig" %}
 
@@ -383,19 +383,19 @@ class Task
     {{ form_end(form) }}
 {% endblock %}
 
-							</code>
-						</pre>
-        			</section>
-				</section>
-				<section>
-					<section>
-						<h1>Tłumaczenia</h1>
-						<p>Łatwe tłumacznie podstawowych struktór aplikacji</p>
-						<p>YML !!</p>
-					</section>
-					<section>
-						<pre>
-							<code>
+                            </code>
+                        </pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Tłumaczenia</h1>
+                        <p>Łatwe tłumacznie podstawowych struktór aplikacji</p>
+                        <p>YML !!</p>
+                    </section>
+                    <section>
+                        <pre>
+                            <code>
 todolist:
     add: Dodaj nowy task
     done: Zrobione
@@ -407,26 +407,27 @@ todolist:
     name: Nazwa zadania
     id: id
     isdone: Ukończenie
+    save:zapisz
 
-							</code>
-						</pre>
-        			</section>
-				</section>
-				<section>
-					<h1>Piszemy apke</h1>
-					<p>Nie ma co dalej opowiadać, zobaczcie to w praktyce</p>
-				</section>
-				<section>
-					<section>
-						<h1>Testy</h1>
-						<p>Łatwe zabezpieczenie żeby ktoś dopisując coś nie zepsuł naszej pracy</p>
-						<p>Funkcjonalne i jednostkowe</p>
-					</section>
-					<section>
-						<p>Jednostkowy EntityTest.php</p>
-						<pre>
-							<code>
-								namespace Laborka\ToDoListBundle\Tests;
+                            </code>
+                        </pre>
+                    </section>
+                </section>
+                <section>
+                    <h1>Piszemy apke</h1>
+                    <p>Nie ma co dalej opowiadać, zobaczcie to w praktyce</p>
+                </section>
+                <section>
+                    <section>
+                        <h1>Testy</h1>
+                        <p>Łatwe zabezpieczenie żeby ktoś dopisując coś nie zepsuł naszej pracy</p>
+                        <p>Funkcjonalne i jednostkowe</p>
+                    </section>
+                    <section>
+                        <p>Jednostkowy EntityTest.php</p>
+                        <pre>
+                            <code>
+                                namespace Laborka\ToDoListBundle\Tests;
 
 use Laborka\ToDoListBundle\Entity\Task;
 
@@ -440,14 +441,14 @@ class EntityTest extends \PHPUnit_Framework_TestCase
         $this->assertSame($testName, $task->getName());
     }
 }
-							</code>
-						</pre>
-        			</section>
-        			<section>
-						<p>Funkcjonalny Controller/ToDoListControllerTest.php</p>
-						<pre>
-							<code>
-								class ToDoListControllerTest extends WebTestCase
+                            </code>
+                        </pre>
+                    </section>
+                    <section>
+                        <p>Funkcjonalny Controller/ToDoListControllerTest.php</p>
+                        <pre>
+                            <code>
+                                class ToDoListControllerTest extends WebTestCase
 {
     /**
      * @var Client $client
@@ -473,48 +474,48 @@ class EntityTest extends \PHPUnit_Framework_TestCase
         $this->assertGreaterThanOrEqual($crawler->filter('test_name')->count(), 1);
     }
 }
-							</code>
-						</pre>
-        			</section>
-				</section>
-				<section>
-					<h1>A na koniec konkurs ;)</h1>
-				</section>
-			</div>
-		</div>
+                            </code>
+                        </pre>
+                    </section>
+                </section>
+                <section>
+                    <h1>A na koniec konkurs ;)</h1>
+                </section>
+            </div>
+        </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
 
-		<script>
+        <script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
 
-		</script>
+        </script>
 
-	</body>
+    </body>
 </html>
